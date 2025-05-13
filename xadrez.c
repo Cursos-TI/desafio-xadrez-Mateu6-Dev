@@ -1,15 +1,15 @@
 #include <stdio.h>
-
-//Nivel novato
+//Nivel Aventureiro
 
 int main()
 {
-    int i = 1, menu;
+    int i = 1, menu, j;
 
     printf("###Menu de opcoes do jogo###\n");
     printf("1. Torre\n");
     printf("2. Bispo\n");
     printf("3. Rainha\n");
+    printf("4. Cavalo\n");
     scanf("%d", &menu);
 
     switch(menu){
@@ -31,6 +31,17 @@ int main()
             //A Rainha pode se mover para qualquer lado. 8 casas a esquerda.
             for(int i = 1;i <= 8; i++){
                 printf("A rainha moveu-se %d para a esquerda\n", i);
+            }
+            break;
+        case 4:
+            // O Cavalo faz 3 movimentos em L (2 para baixo, 1 para esquerda)
+            for (int i = 1; i <= 1; i++){
+                int j = 1;
+                while(j <= 2){
+                    printf("O cavalo moveu-se %d casa para baixo\n", j);
+                    j++;
+                }
+                printf("O cavalo moveu-se 1 casa para o lado\n");
             }
             break;
         default:
